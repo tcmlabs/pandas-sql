@@ -1,0 +1,27 @@
+{
+  "files.trimFinalNewlines": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.pyc": { "when": "$(basename).py" }
+  },
+  "editor.formatOnSave": true,
+  "python.linting.ignorePatterns": ["**/site-packages/**/*.py"],
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8CategorySeverity.W": "Error",
+  "python.linting.pylintEnabled": false,
+  "python.linting.mypyEnabled": true,
+  "python.pythonPath": "${workspaceFolder}/.venv/bin/python",
+  "python.formatting.provider": "black",
+  // https://github.com/DonJayamanne/pythonVSCode/issues/585#issuecomment-390728345
+  "python.sortImports.args": ["-ns", "__init__.py"],
+  "[python]": {
+    // https://code.visualstudio.com/docs/python/editing#_sort-imports-on-save
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  }
+}
