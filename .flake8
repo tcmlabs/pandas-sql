@@ -1,0 +1,4 @@
+[flake8]
+max-line-length = 89
+max-complexity = 3
+mypy_config = flake8-mypy.cfg
